@@ -1,0 +1,23 @@
+.ant-message {
+  .ant-message-custom-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 0;
+  }
+  .anticon {
+    font-size: 18px;
+  }
+  span:not(.anticon) {
+    margin-bottom: -2px;
+  }
+}
+.btn {
+  font-size: 14px;
+  height: 36px;
+  padding: 0px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}

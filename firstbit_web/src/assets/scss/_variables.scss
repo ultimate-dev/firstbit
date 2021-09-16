@@ -1,0 +1,24 @@
+$primary: #5386e4;
+$secondary: #a663cc;
+$success: #6cc551;
+$warning: #ffbf00;
+$info: #6e7dab;
+$danger: #d7263d;
+$grey: #eee;
+$dark: #000;
+
+$white: #fff;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "warning": $warning,
+  "info": $info,
+  "danger": $danger,
+  "grey": $grey,
+  "dark": $dark,
+  "white": $white,
+);
+
+$shadow: 0 0 4px 0 rgba(0, 0, 0, 0.03);

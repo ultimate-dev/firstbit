@@ -1,0 +1,106 @@
+{
+  "jpeg": {
+    "sharp": {
+      "onlyType": ["jpeg", "jpg", "png", "gif", "svg+xml", "webp"]
+    },
+    "imagemin": {
+      "onlyType": ["jpeg", "jpg", "png", "gif", "svg+xml", "webp"]
+    },
+    "initial": {
+      "type": "sharp",
+      "format": "jpeg",
+      "progressive": false,
+      "lossy": true,
+      "quality": 80,
+      "subsampling": "4:2:0",
+      "quantization": 0
+    }
+  },
+  "png": {
+    "sharp": {
+      "onlyType": ["jpeg", "jpg", "png", "gif", "svg+xml", "webp"]
+    },
+    "imagemin": {
+      "onlyType": ["png", "gif", "svg+xml"]
+    },
+    "initial": {
+      "type": "sharp",
+      "format": "png",
+      "progressive": false,
+      "lossy": true,
+      "quality": 80,
+      "level": 6,
+      "speed": 4,
+      "optimize": 3
+    }
+  },
+  "svg": {
+    "imagemin": {
+      "onlyType": ["jpeg", "jpg", "png", "gif", "svg+xml", "webp"]
+    },
+    "initial": {
+      "type": "imagemin",
+      "format": "svg+xml"
+    }
+  },
+  "webp": {
+    "sharp": {
+      "onlyType": ["jpeg", "jpg", "png", "gif", "svg+xml", "webp"]
+    },
+    "imagemin": {
+      "onlyType": ["jpeg", "jpg", "png", "gif", "svg+xml", "webp"]
+    },
+    "initial": {
+      "type": "sharp",
+      "format": "webp",
+      "lossy": true,
+      "quality": 80,
+      "alphaQuality": 100,
+      "effort": 4
+    }
+  },
+  "tiff": {
+    "sharp": {
+      "onlyType": ["jpeg", "jpg", "png", "gif", "svg+xml", "webp"]
+    },
+    "initial": {
+      "type": "sharp",
+      "format": "tiff",
+      "quality": 80
+    }
+  },
+  "gif": {
+    "imagemin": {
+      "onlyType": ["gif"]
+    },
+    "initial": {
+      "type": "imagemin",
+      "format": "gif",
+      "lossy": 80,
+      "colors": 256,
+      "optimize": 1,
+      "unoptimize": false
+    }
+  },
+  "guetzli": {
+    "imagemin": {
+      "onlyType": ["jpeg", "jpg", "png", "gif", "svg+xml"]
+    },
+    "initial": {
+      "type": "imagemin",
+      "format": "jpeg",
+      "quality": 95
+    }
+  },
+  "flif": {
+    "node-flif": {
+      "onlyType": ["png"]
+    },
+    "initial": {
+      "type": "node-flif",
+      "format": "flif",
+      "effort": 50,
+      "quality": 50
+    }
+  }
+}

@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+// Dependencies
+const http = require("http");
+const https = require("https");
+
+const configs = require("../configs");
+
+const port = process.env.PORT || configs.port;
+
+const app = require("../app");
+const db = require("../helper/db");
+
+//const server = http.createServer(app);
+
+
+db.sequelize
+  .sync({ alter: true })
+  .then(() => {
+    //server.listen(port);
+    app.listen(port, () => {
+      console.log("------------------------------------------------");
+      console.log(`------------ SERVER STARTED =>  ------------`);
+      console.log("------------------------------------------------");
+    });
+    console.log("Sunucu Başlatıldı.");
+    console.log("Veri Tabanına Bağlanıldı");
+  })
+  .catch((err) => {
+    console.log("Veri Tabanına Bağlanılamadı.");
+    console.log(err);
+  });

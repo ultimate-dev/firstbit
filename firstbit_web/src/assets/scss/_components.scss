@@ -1,0 +1,79 @@
+.btn {
+  height: auto;
+  border-radius: 8px;
+}
+@each $name, $value in $colors {
+  .btn-#{$name} {
+    background-color: #{$value} !important;
+    border: 1px solid #{$value} !important;
+    color: $white !important;
+    box-shadow: 0 3px 5px 0 rgba($value, 0.3);
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.focus {
+      background-color: darken($value, 10%) !important;
+      border-color: darken($value, 10%) !important;
+      color: $white !important;
+    }
+  }
+  .btn-soft-#{$name} {
+    background-color: lighten($value, 36%) !important;
+    color: $value !important;
+    box-shadow: none !important;
+    border: none !important;
+    opacity: 1 !important;
+  }
+}
+
+.shadow {
+  box-shadow: $shadow!important;
+}
+
+.card {
+  background-color: transparent;
+  border: none;
+  .card-header {
+    border-bottom: 0px;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding-left: 30px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .card-body {
+    border-bottom: 0px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+  }
+}
+
+.alert {
+  padding: 20px;
+  border-radius: 20px;
+}
+@each $name, $value in $colors {
+  .alert-#{$name} {
+    background-color: lighten($value, 36%) !important;
+    border: 0px solid #{$value} !important;
+    color: #{$value} !important;
+  }
+}
+.rounded{
+  border-radius: 20px!important;
+}
+@each $name, $value in $colors {
+  .bg-#{$name} {
+    background-color: #{$value} !important;
+  }
+  .bg-soft-#{$name} {
+    background-color: lighten($value, 36%) !important;
+  }
+  .border-#{$name} {
+    border-color: #{$value} !important;
+  }
+  .text-#{$name} {
+    color: #{$value} !important;
+  }
+}
